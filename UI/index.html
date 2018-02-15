@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="author" content="Murray Watson, murster972@yahoo.com">
+        <meta charset="utf-8">
+        <title>Space Age Calculator</title>
+        <link rel="stylesheet" type="text/css" href="style/main.css">
+        <link rel="stylesheet" type="text/css" href="style/responive.css">
+        <script src="scripts/jquery-3.2.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="scripts/main.js"></script>
+    </head>
+    <body>
+        <canvas id="star_canvas"></canvas>
+        <div id="wrapper">
+            <div id="info_container" class="">
+                <div class="input_wrapper start years">
+                    <div class="custom_spinner years" id="decrease">-</div>
+                    <div class="custom_spinner years" id="increase">+</div>
+                    <input class="age_input" id="years" type="number" placeholder="Years" title="No. of Years" min=1>
+                    <div class="age_symbol years">Y</div>
+                </div>
+                <div class="input_wrapper months">
+                    <div class="custom_spinner months" id="decrease">-</div>
+                    <div class="custom_spinner months" id="increase">+</div>
+                    <input class="age_input" id="months" type="number" placeholder="Months" title="No. of Months" min=1>
+                    <div class="age_symbol months">M</div>
+                </div>
+                <div class="input_wrapper days">
+                    <div class="custom_spinner days" id="decrease">-</div>
+                    <div class="custom_spinner days" id="increase">+</div>
+                    <input class="age_input" id="days" type="number" placeholder="Days" title="No. of Days" min=1>
+                    <div class="age_symbol days">D</div>
+                </div>
+                <div id="space_age_info">
+                    <p>Enter your age (ammount of days, months and years) above, then click on the planets below to find out your space age
+                       and facts about each planet.</p>
+                </div>
+            </div>
+            <div id="planet_container" class="">
+                <div class="planet start" id="mercury"></div>
+                <div class="planet" id="venus"></div>
+                <div class="planet" id="earth"></div>
+                <div class="planet" id="mars"></div>
+                <div class="planet" id="jupiter"></div>
+                <div class="planet" id="saturn">
+                    <div class="rings saturn">
+                        <div class="space saturn">
+                            <div class="center saturn"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="planet" id="uranus">
+                    <div class="rings uranus">
+                        <div class="space uranus">
+                            <div class="center uranus"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="planet" id="neptune"></div>
+                <div class="planet" id="pluto"></div>
+            </div>
+        </div>
+        <div id="planet_info_container" class="hidden">
+            <h1 id="planet_title"></h1>
+            <div id="planet_info">
+                <p id="planet_intro"><p>
+                 <table>
+                     <tr>
+                         <td>Earth: </td>
+                         <td id="earth_age"></td>
+                     </tr>
+                     <tr>
+                         <td id="planet_name"></td>
+                         <td id="planet_age"></td>
+                     </tr>
+                 </table>
+                 <!-- the value contains an arrow, it is showing locaclly, i appologise if it does not show -->
+                 <input id="planet_return_arrow" type="button" value="&#11104;">
+            </div>
+        </div>
+    </body>
+</html>
